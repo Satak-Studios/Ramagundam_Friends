@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head><title>Chat</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <form action="action_page.php" method="post" name="myForm" onsubmit="send()">
+  <div class="container">
+    <div class="header">
+      <h1>WebChat</h1>
+      <p id="p1">test</p>
+    </div>
+    <div class="body">
+      <p id="other" class="message">Hello</p>
+      <label for="text"></label>
+      <p  class="message user_message">Hi</p>
+    </label>
+    </div>
+  </form>
+    <div class="footer">
+      <form>
+        <input type="text" id="p2">
+        <button onclick="send()">SEND</button>
+      </form>
+    </div>
+
+    </div>
+  </div>
+  <script>
+
+    function send(){
+      
+      var fname = document.getElementById("p2").value;
+      document.getElementById("p1").value = fname;
+      var other = document.getElementById("ther").value
+
+      if(fname => 1){
+        alert("Sending!")
+      }
+    }
+  </script>
+  <style>
+    .message:after {
+       visibility: hidden;
+       position: relative;
+     }
+    .message:after:after {
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "This text replaces the original.";
+      }
+  </style>
+</body>
+</html>
